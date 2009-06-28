@@ -1,0 +1,18 @@
+<% content_for :sidebar do %>
+  <%= typus_block :location => @resource[:self], :partial => 'sidebar' %>
+  <%= actions %>
+<% end %>
+
+<h2><%= link_to _(@resource[:class].human_name.pluralize), :action => 'index' %> &rsaquo; 
+    <%= _("Show") %></h2>
+
+<%= typus_block :location => @resource[:self], :partial => 'show' %>
+
+<dl>
+<%- @fields.map { |u| u.first }.each do |column| -%>
+  <dt><%=h @resource[:class].human_attribute_name(column) %></dt>
+  <dd><%=h (!@item.send(column).blank?) ? @item.send(column) : 'nil' %></dd>
+<%- end -%>
+</dl>
+
+<%= typus_relationships %>

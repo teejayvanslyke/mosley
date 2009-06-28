@@ -1,0 +1,21 @@
+Slide:
+  fields:
+    list: caption, image_file_name
+    form: caption, image_file_name
+    show: caption, created_at, updated_at, image_file_name, image_content_type, image_file_size, image_updated_at
+    relationship:
+    options:
+      auto_generated:
+      read_only:
+      selectors:
+  actions:
+    index:
+    edit:
+  export:
+  order_by:
+  relationships: 
+  filters:
+  search:
+  application: Kelsey Mosley
+  description:
+

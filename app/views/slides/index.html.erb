@@ -1,0 +1,10 @@
+<h1>Kelsey Mosley</h1>
+<div class="demo">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+  <%- @slides.each do |slide| -%>
+    <li><%= image_tag slide.image.url(:large), :title => slide.caption %></li>
+  <%- end -%>
+</ul>
+<p class="nav"><a href="#" onclick="$.galleria.prev(); return false;">&laquo; previous</a> | <a href="#" onclick="$.galleria.next(); return false;">next &raquo;</a></p>
+</div>
